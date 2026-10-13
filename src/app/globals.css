@@ -59,3 +59,12 @@ a {
   --animation-duration-normal: 0.5s;
   --animation-duration-slow: 1s;
 }
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--color-default-background);
+  color: var(--color-default-foreground);
+}
