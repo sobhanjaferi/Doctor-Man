@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Vazirmatn } from "next/font/google";
-import { NextFont } from "next/dist/compiled/@next/font";
 
-const vazirmatn: NextFont = Vazirmatn({
+const vazirmatn = Vazirmatn({
   subsets: ["latin", "arabic"],
   display: "swap",
 });
