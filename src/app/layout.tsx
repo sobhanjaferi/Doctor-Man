@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Vazirmatn } from "next/font/google";
+import HeaderComponent from "@/components/header/header.component";
+import FooterComponent from "@/components/footer/footer.component";
+import { ReactElement } from "react";
 
 const vazirmatn = Vazirmatn({
   subsets: ["latin", "arabic"],
@@ -12,10 +15,16 @@ export const metadata: Metadata = {
   description: "پلتفرم جامع جستجوی دکتر و رزرو آنلاین",
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({
+  children,
+}: LayoutProps<"/">): ReactElement {
   return (
     <html lang="fa" dir="rtl" className={vazirmatn.className}>
-      <body>{children}</body>
+      <body>
+        <HeaderComponent />
+        <main>{children}</main>
+        <FooterComponent />
+      </body>
     </html>
   );
 }
