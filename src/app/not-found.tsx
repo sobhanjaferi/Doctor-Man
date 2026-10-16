@@ -2,6 +2,7 @@ import { ReactElement } from "react";
 import styles from "./not-found.module.css";
 import Image from "next/image";
 import GlobalSearchBoxComponent from "@/components/global-search-box/global-search-box.component";
+import notFound from "@@/public/illustration/not-found.png";
 
 export default function NotFound(): ReactElement {
   return (
@@ -16,12 +17,7 @@ export default function NotFound(): ReactElement {
       </div>
 
       <div className={styles.visuals}>
-        <Image
-          src={"/illustration/not-found.png"}
-          alt="not found"
-          width={200}
-          height={2000}
-        />
+        <Image src={notFound} alt="not found" />
       </div>
 
       <div className={styles.search}>
