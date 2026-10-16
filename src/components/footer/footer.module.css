@@ -27,7 +27,7 @@
 
     .writings {
       .logo {
-        font-size: 2rem;
+        font-size: var(--fz-600);
         font-weight: 700;
       }
       .description {
