@@ -1,0 +1,71 @@
+.global-search-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.7rem;
+
+  inline-size: min(50rem, 100%);
+
+  padding: 0.4rem 0.8rem;
+
+  border: 1px solid var(--color-gray-20);
+  border-radius: 999rem;
+
+  .prefix {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    > svg {
+      font-size: x-large;
+
+      color: var(--color-gray-80);
+    }
+  }
+
+  > input {
+    flex: 1;
+
+    min-inline-size: 0px;
+
+    background-color: transparent;
+
+    border: none;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .divider {
+    inline-size: 2px;
+    block-size: 1.5rem;
+
+    background-color: var(--color-gray-20);
+  }
+  > button {
+    background-color: transparent;
+
+    border: none;
+
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    &:focus {
+      outline: none;
+
+      cursor: pointer;
+    }
+  }
+
+  &:focus-within {
+    border-color: var(--color-primary);
+
+    .prefix {
+      > svg {
+        color: var(--color-primary);
+      }
+    }
+  }
+}
