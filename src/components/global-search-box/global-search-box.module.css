@@ -17,7 +17,7 @@
     align-items: center;
 
     > svg {
-      font-size: x-large;
+      font-size: var(--fz-600);
 
       color: var(--color-gray-80);
     }
