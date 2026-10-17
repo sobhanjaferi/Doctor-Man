@@ -1,0 +1,72 @@
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-block-size: 100%;
+
+  .contents {
+    display: grid;
+    gap: 1rem;
+
+    .writings {
+      display: grid;
+      gap: 0.5rem;
+
+      .status-code {
+        font-size: var(--fz-700);
+        font-weight: 900;
+      }
+    }
+
+    .actions {
+      > button {
+        background-color: var(--color-primary);
+
+        border: 2px solid transparent;
+        border-radius: var(--border-radius);
+
+        padding: 0.5rem 1rem;
+
+        cursor: pointer;
+
+        &:hover {
+          background-color: var(--color-primary-opposite);
+          color: var(--color-primary);
+
+          border: 2px solid var(--color-primary);
+
+          font-weight: 600;
+        }
+      }
+    }
+
+    .trace {
+      > details {
+        > summary {
+          cursor: pointer;
+        }
+
+        > pre {
+          max-inline-size: 29rem;
+
+          overflow: auto;
+
+          margin-bottom: 1rem;
+          padding: 1rem;
+
+          border-radius: var(--border-radius);
+
+          background-color: var(--color-gray-20);
+        }
+      }
+    }
+  }
+
+  .visuals {
+    img {
+      inline-size: 22rem;
+      block-size: 15rem;
+    }
+  }
+}
