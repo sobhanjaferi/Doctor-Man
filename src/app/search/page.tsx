@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 import styles from "./page.module.css";
-import CardComponent from "@/components/card/card.component";
+import FilterComponent from "./components/filter/filter.component";
 
 export default function SearchPage(): ReactElement {
   const items = Array(100)
@@ -9,13 +9,13 @@ export default function SearchPage(): ReactElement {
 
   return (
     <div className={styles.page}>
-      <div className={styles.filters}>
-        <CardComponent>
-          <div className="title">زوج یا فرد</div>
-          <button>فرد</button>
-          <button>زوج</button>
-        </CardComponent>
-      </div>
+      <FilterComponent
+        title="زوج یا فرد"
+        options={[
+          { title: "زوج", value: "even" },
+          { title: "فرد", value: "odd" },
+        ]}
+      />
 
       <ul className={styles.results}>
         {items.map((item) => (
