@@ -5,7 +5,7 @@ import styles from "./filter.module.css";
 
 type Option = {
   value: string;
-  title: string;
+  label: string;
 };
 
 type Props = {
@@ -24,7 +24,7 @@ export default function FilterComponent({
         <div className={styles.buttons}>
           {options.map((option) => (
             <FilterButtonComponent key={option.value}>
-              {option.title}
+              {option.label}
             </FilterButtonComponent>
           ))}
         </div>

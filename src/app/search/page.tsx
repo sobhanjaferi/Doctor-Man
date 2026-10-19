@@ -9,13 +9,24 @@ export default function SearchPage(): ReactElement {
 
   return (
     <div className={styles.page}>
-      <FilterComponent
-        title="زوج یا فرد"
-        options={[
-          { title: "زوج", value: "even" },
-          { title: "فرد", value: "odd" },
-        ]}
-      />
+      <div className={styles.filters}>
+        <FilterComponent
+          title="زوج یا فرد"
+          options={[
+            { label: "زوج", value: "even" },
+            { label: "فرد", value: "odd" },
+          ]}
+        />
+
+        <FilterComponent
+          title="بخش پذیری"
+          options={[
+            { label: "two", value: "بخش پذیر بر ۲" },
+            { label: "three", value: "بخش پذیر بر ۳" },
+            { label: "five", value: "بخش پذیر بر ۵" },
+          ]}
+        />
+      </div>
 
       <ul className={styles.results}>
         {items.map((item) => (
