@@ -30,6 +30,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-  ],
+, "src/app/search/providers/filters/filters.provider.tsx"  ],
   "exclude": ["node_modules"]
 }
