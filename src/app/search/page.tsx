@@ -21,7 +21,6 @@ export default function SearchPage(): ReactElement {
         <FilterComponent
           title="بخش پذیری"
           options={[
-            { label: "two", value: "بخش پذیر بر ۲" },
             { label: "three", value: "بخش پذیر بر ۳" },
             { label: "five", value: "بخش پذیر بر ۵" },
           ]}
